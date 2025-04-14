@@ -187,7 +187,7 @@ export default function MeetingScheduler() {
         understand, and provide solutions.
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 border rounded-lg overflow-hidden shadow-md">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 border rounded-lg overflow-hidden shadow-md">
         <div className="bg-primary/5 p-6">
           <div className="flex items-center gap-2 mb-4">
             <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -259,7 +259,7 @@ export default function MeetingScheduler() {
           </div>
 
           <div className="grid grid-cols-7 gap-1 text-center text-xs mb-2">
-            {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
+            {["S", "M", "T", "W", "T", "F", "S"].map((day) => (
               <div key={day} className="py-1">
                 {day}
               </div>

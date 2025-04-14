@@ -153,30 +153,30 @@ export default function SolutionsPage() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {solutions.map((solution) => (
               <motion.div
                 key={solution.id}
                 id={solution.id}
                 variants={item}
-                className="relative overflow-hidden rounded-lg border bg-background p-8 transition-all hover:shadow-md flex flex-col"
+                className="relative overflow-hidden rounded-lg border bg-background p-6 transition-all hover:shadow-md flex flex-col"
                 whileHover={{
-                  scale: 1.03,
+                  scale: 1.02,
                   transition: { duration: 0.2 },
                   boxShadow: "0 10px 30px -15px rgba(0, 0, 0, 0.3)",
                 }}
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className={`rounded-full ${solution.bgColor} p-3`}>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`rounded-full ${solution.bgColor} p-2.5`}>
                     <solution.icon
-                      className={`h-6 w-6 text-${solution.color.split("-")[1]}-600 dark:text-${solution.color.split("-")[1]}-400`}
+                      className={`h-5 w-5 text-${solution.color.split("-")[1]}-600 dark:text-${solution.color.split("-")[1]}-400`}
                     />
                   </div>
-                  <h3 className="font-bold text-xl">{solution.name}</h3>
+                  <h3 className="font-bold text-lg">{solution.name}</h3>
                 </div>
-                <p className="text-muted-foreground flex-grow">{solution.description}</p>
-                <div className="mt-6">
+                <p className="text-muted-foreground text-sm flex-grow">{solution.description}</p>
+                <div className="mt-4">
                   <Button
                     variant="outline"
                     size="sm"

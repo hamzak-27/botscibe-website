@@ -443,8 +443,8 @@ export default function Chatbot() {
 
   if (!isOpen) {
     return (
-      <Button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 rounded-full h-14 w-14 shadow-lg">
-        <Bot className="h-6 w-6" />
+      <Button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 rounded-full h-12 w-12 shadow-lg">
+        <Bot className="h-5 w-5" />
       </Button>
     )
   }
@@ -452,8 +452,8 @@ export default function Chatbot() {
   return (
     <div
       className={cn(
-        "fixed bottom-6 right-6 bg-background border rounded-lg shadow-lg transition-all duration-300 w-80 md:w-96 overflow-hidden",
-        isMinimized ? "h-14" : "h-[500px]",
+        "fixed bottom-6 right-6 bg-background border rounded-lg shadow-lg transition-all duration-300 w-[85vw] sm:w-80 md:w-96 overflow-hidden",
+        isMinimized ? "h-14" : "h-[500px] max-h-[80vh]",
       )}
     >
       <div className="flex items-center justify-between p-3 border-b bg-primary/5">

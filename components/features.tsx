@@ -63,22 +63,22 @@ export default function Features() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2"
+        className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2"
       >
         {features.map((feature, index) => (
           <motion.div
             key={feature.name}
             variants={item}
-            className="relative overflow-hidden rounded-lg border bg-background p-8 transition-all hover:shadow-md"
-            whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+            className="relative overflow-hidden rounded-lg border bg-background p-6 transition-all hover:shadow-md"
+            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
           >
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <div className="rounded-full bg-primary/10 p-2">
-                <feature.icon className="h-6 w-6 text-primary" />
+                <feature.icon className="h-5 w-5 text-primary" />
               </div>
               <h3 className="font-bold">{feature.name}</h3>
             </div>
-            <p className="mt-2 text-muted-foreground">{feature.description}</p>
+            <p className="mt-2 text-muted-foreground text-sm sm:text-base">{feature.description}</p>
           </motion.div>
         ))}
       </motion.div>
