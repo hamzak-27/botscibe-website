@@ -66,7 +66,7 @@ export default function Hero() {
         transition={animationConfig.transition}
         className="flex flex-col items-center mb-4 md:mb-6"
       >
-        <Logo height={120} width={240} className="mb-4 md:mb-6 md:h-[150px] md:w-[300px] lg:h-[200px] lg:w-[400px]" />
+        <Logo height={120} width={360} className="mb-4 md:mb-6 md:h-[150px] md:w-[450px] lg:h-[200px] lg:w-[600px]" />
       </motion.div>
       <motion.div
         initial={fadeInConfig.initial}
@@ -81,8 +81,10 @@ export default function Hero() {
           For Your Business
         </h1>
         <p className="mx-auto max-w-[42rem] leading-normal text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl">
-          BotScribe delivers cutting-edge AI services that transform how businesses operate. From intelligent chatbots
-          to document generation, we're your partner in AI innovation.
+          From our predefined solutions to your workflow according solutions we provide all
+        </p>
+        <p className="mx-auto max-w-[42rem] leading-normal text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl italic">
+          "You explain to us your workflow, we will automate it - no limits"
         </p>
       </motion.div>
       <motion.div
