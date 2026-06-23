@@ -1,10 +1,14 @@
 import { NextResponse } from "next/server"
 import OpenAI from "openai"
 
-// Initialize the OpenAI client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-})
+// Initialize the OpenAI client lazily to avoid build-time errors
+let openai: OpenAI | null = null
+function getOpenAI() {
+  if (!openai) {
+    openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+  }
+  return openai
+}
 
 // URL to your Python email service
 const EMAIL_SERVICE_URL = process.env.EMAIL_SERVICE_URL || "http://localhost:5000"
@@ -146,7 +150,7 @@ export async function POST(request: Request) {
       ]
 
       // Call OpenAI API
-      const completion = await openai.chat.completions.create({
+      const completion = await getOpenAI().chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: formattedMessages,
         temperature: 0.7,

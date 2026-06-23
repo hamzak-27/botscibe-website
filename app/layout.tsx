@@ -13,10 +13,59 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "BotScribe - AI Solutions for Your Business",
+  title: {
+    default: "BotScribe — AI Automation for Modern Business",
+    template: "%s | BotScribe",
+  },
   description:
-    "BotScribe delivers cutting-edge AI services including voice agents, chatbots, document generation, and more.",
-    generator: 'v0.dev'
+    "BotScribe builds AI voice agents, chatbots, and automation systems that handle customer conversations 24/7 — so your business never misses a lead, inquiry, or sale.",
+  keywords: [
+    "AI automation",
+    "AI voice agents",
+    "chatbot development",
+    "business automation",
+    "customer support AI",
+    "lead qualification AI",
+    "real estate AI",
+    "healthcare AI automation",
+    "BotScribe",
+  ],
+  authors: [{ name: "BotScribe" }],
+  creator: "BotScribe",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://botscribe.info",
+    siteName: "BotScribe",
+    title: "BotScribe — AI Automation for Modern Business",
+    description:
+      "AI voice agents, chatbots, and automation systems that handle customer conversations 24/7. Never miss a lead, inquiry, or sale.",
+    images: [
+      {
+        url: "/botscribe-logo-final.png",
+        width: 1200,
+        height: 630,
+        alt: "BotScribe — AI Automation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BotScribe — AI Automation for Modern Business",
+    description: "AI voice agents and chatbots that handle customer conversations 24/7.",
+    creator: "@botscribe",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default function RootLayout({
@@ -35,6 +84,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'
