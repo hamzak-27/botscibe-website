@@ -10,7 +10,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Clock, Loader2 } from "lucide-react"
 import MeetingScheduler from "@/components/meeting-scheduler"
-import Chatbot from "@/components/chatbot"
 import { useToast } from "@/hooks/use-toast"
 
 export default function ContactPage() {
@@ -170,15 +169,15 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">hello@botscribe.info</p>
+                    <p className="text-muted-foreground">ihamzakhan89@gmail.com</p>
+                    <p className="text-muted-foreground">sondeadeeb@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">+91 9136719552</p>
-                    <p className="text-muted-foreground">+91 9867273743</p>
+                    <p className="text-muted-foreground">+91 8169555098</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -205,7 +204,6 @@ export default function ContactPage() {
         </section>
 
         <Footer />
-        <Chatbot />
       </div>
     </div>
   )
